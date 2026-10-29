@@ -1,127 +1,102 @@
 # Warframe Mod Names
 
-A minimal, static Warframe mod translation search for GitHub Pages. Search any official name and see every available language directly beside the complete mod card. An independent, non-commercial fan project.
+Find a Warframe mod by its name in any language and compare all available official translations alongside its complete mod card.
+
+[Website](https://wuoc-k.github.io/warframe-mod-translations/) · [Report an issue](https://github.com/Wuoc-k/warframe-mod-translations/issues)
 
 ## Features
 
-- English-only interface, focused on search rather than a decorative dashboard.
-- Search across all 15 imported languages, including partial words and accent-insensitive matches (`Vitalität`, `Vitalitat`, `Vitality`). Multiple search terms can match different translations of the same mod.
-- Every result displays **all languages immediately** in a compact responsive grid. No hidden language selection or detail click is required to compare names.
-- Complete original Wiki mod cards, including frame and printed values, where a verified mapping exists. Images preserve their natural aspect ratio and are never cropped. The Wiki article opens from the external-link icon next to the mod name.
-- Category, mod type and rarity filters; name/category/rarity sorting; copy by clicking a name or its copy button.
-- Compatibility appears directly in each listing. Mod cards are vertically centered, and a standard external-link icon opens the Wiki article. There is no detail dialog.
-- 24 results per page, lazy images, prebuilt listing metadata, no frontend frameworks or runtime dependencies.
+- Search across all imported languages with partial-word and accent-insensitive matching.
+- Compare every available translation directly in each result. The interface is in English.
+- Copy names by clicking the text or its copy button.
+- Filter by category, mod type and rarity; sort by name, category or rarity.
+- View complete mod cards and open the corresponding Warframe Wiki article.
+- Responsive layout, sticky search, lazy-loaded images and paginated results.
 
-## Local development
+The site is fully static: HTML, CSS, vanilla JavaScript and prebuilt JSON. It does not need a backend, database or frontend framework.
 
-The Git repository is the **nested folder** `warframe-mod-translations`. In PowerShell:
+## Run locally
 
-```powershell
-cd D:\Projekte\Warframe-Mod-Translations\warframe-mod-translations
-npm install
+Install [Node.js](https://nodejs.org/) 24 LTS, then:
+
+```sh
+git clone https://github.com/Wuoc-k/warframe-mod-translations.git
+cd warframe-mod-translations
+npm ci
 npm run dev
 ```
 
-Open `http://127.0.0.1:4173`. Node.js **24 LTS** is recommended (minimum 22). A real data snapshot is committed with the project, so starting the site does not require a live import. Do not open `index.html` directly through `file://`; modules and local JSON requests need HTTP.
+Open **http://127.0.0.1:4173**. A generated data snapshot is included, so a fresh import is not required to run the site. Use the local server rather than opening `index.html` directly.
 
-```sh
-npm run update:data  # import live exports, translations and full-card mappings
-npm test             # reproducible unit tests and real-snapshot integration checks
-npm run validate     # validate the stored snapshot and search index
-npm run build        # create a static Pages artifact in dist/
-node scripts/serve.mjs --dist
-```
-
-Set `PORT` to change the local server port. In restrictive Windows sandboxes, `node --test --test-isolation=none` avoids test-worker `spawn EPERM` failures. No Docker, Ruby, Jekyll, backend or database is needed.
-
-## Sources and coverage
-
-Sources were inspected and live-imported on **29 October 2026**. Exact source commits are recorded in `data/manifest.json`.
-
-| Source | Purpose and verified structure |
+| Command | Purpose |
 | --- | --- |
-| [Public Export Plus](https://github.com/calamity-inc/warframe-public-export-plus) | `ExportUpgrades.json` is an object keyed by stable `/Lotus/...` game IDs. Name fields reference localization keys. |
-| `ExportAvionics.json` | Supplementary Railjack entries; merge by stable ID, preferring Upgrades on overlap. |
-| `dict.*.json` | Dynamically discovered language dictionaries; exact localization-key joins, never fuzzy name matching or machine translation. |
-| [WFCD / warframe-items](https://github.com/WFCD/warframe-items) | `data/json/Mods.json`: `uniqueName` matches the stable game ID; `wikiaThumbnail` supplies the actual complete card URL. Conflicting mappings and non-Wiki hosts are rejected. No guessed image filenames. |
-| [Warframe Wiki](https://wiki.warframe.com/) | Hosts the complete cards. Some article/script requests return HTTP 403, but the structured `pageimages` API and browser image delivery have both been verified. The API supplements missing community mappings; verified references are retained if a later request is denied. No access-control bypass. |
-| `ExportImages.json`, official CDN, [browse.wf](https://browse.wf/) | Original artwork fallback via actual exported texture paths and content hashes. |
-| [Official Public Export index](https://content.warframe.com/PublicExport/index_en.txt.lzma) | Successfully fetched during assessment. The normalized community export avoids another LZMA dependency and supplies additional metadata. |
-| [WarframeTools](https://blackscorp.github.io/WarframeTools/) | Functional inspiration for immediate multilingual comparison; its historical names are not copied. |
+| `npm run dev` | Start the local development server. |
+| `npm run update:data` | Fetch sources and generate a validated data snapshot. Requires internet access. |
+| `npm test` | Run offline unit tests and checks against the included snapshot. |
+| `npm run validate` | Check snapshot integrity and listing metadata. |
+| `npm run build` | Prepare the static site in `dist/`. |
+| `node scripts/serve.mjs --dist` | Preview the built site locally. |
 
-The current snapshot contains **1,514 mods**, **15 dictionaries** and **1,511 complete-card mappings**. The remaining **3** use their complete original artwork, labelled as such. A mapped remote URL is not a guarantee that every visitor can reach that host. If a full card fails to load, the UI explicitly labels the artwork fallback; if that fails, it shows a neutral local SVG.
+Set `PORT` to use another local port. There are no npm runtime dependencies.
 
-Languages: English, German, French, Spanish, Italian, Japanese, Korean, Polish, Portuguese, Russian, Traditional Chinese, Thai, Turkish, Ukrainian and Simplified Chinese. Missing translations are `null` and displayed as **Not available**. Official dictionary values identical to English are preserved; the source does not distinguish deliberate naming from an in-game English fallback.
+## Data and images
 
-This is the best verifiable export coverage, not a claim that every historical/internal game object is available. Same-name mods with different IDs remain separate, such as normal and Flawed Vitality. Frivolous/development entries, `excludeFromCodex`, empty-name placeholders and missing English names are excluded and counted. `codexSecret` remains metadata because it does not reliably mean unavailable. Riven entries are exported base types, not player-generated rolls. Railjack may include historical avionics.
+Names and translations come from [Warframe Public Export Plus](https://github.com/calamity-inc/warframe-public-export-plus). They are joined using stable game IDs and localization keys, without machine translation or fuzzy name matching.
 
-Category mappings use exported types and compatibility/game paths. Aura and Stance come from `type`, Exilus from `isUtility`, Augment/Conclave from game paths, and Primed/Umbral/Archon from official English prefixes. Unknown types use Other. These derived tags are not a complete Wiki taxonomy.
+Full-card references come from [WFCD / warframe-items](https://github.com/WFCD/warframe-items), supplemented by the [Warframe Wiki](https://wiki.warframe.com/) MediaWiki image API. Verified supplementary references are retained in `sources/wiki-cards.json`, so temporary API failures do not discard known cards. Original artwork from the official export CDN or [browse.wf](https://browse.wf/) is used when a full card cannot be verified.
 
-## Images, licenses and privacy
+Images are hosted externally, never cropped, and loaded only as needed. Failed images fall back to artwork or a local placeholder. Names and metadata are served from this site's static files; visitors do not query the source APIs. External image hosts receive normal connection information, but the site sends no page referrer and uses no analytics.
 
-Complete cards and fallback art are **externally hosted**, not mirrored into this repository. The importer downloads mapping JSON, not thousands of image files. Browser/CDN caching and lazy loading handle image delivery; CDN content hashes identify exact artwork versions. Full-card rank/stat text is part of the source image and may differ from the currently exported base drain or a particular in-game rank.
+See [`data/manifest.json`](data/manifest.json) for the current mod count, languages, card coverage and source revisions.
 
-Wiki/API access is not required at runtime for names or metadata: those are prebuilt local JSON files. **Images** are runtime requests to the documented image hosts, so they need network access or browser cache. `referrerpolicy="no-referrer"` avoids disclosing the page URL to those hosts; normal IP/browser information is still transmitted. No analytics, remote fonts or localStorage preferences are used.
+### Limitations
 
-Warframe names and game imagery belong to **Digital Extremes Ltd.**, under the [Warframe Content Policy](https://www.warframe.com/en/contentpolicy) for this non-commercial fan project. They are not released under this program's MIT software license. No official logos or third-party fan artwork are included. Public Export Plus and WFCD software/data mapping notices are retained in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md), which is also included in the deployed artifact. No Wiki article text is reproduced.
+- Coverage follows the upstream exports and can include historical entries. Riven records represent base types, not individual rolls.
+- Same-name variants with different game IDs remain separate, including Flawed mods.
+- Missing translations are shown as **Not available**. An official dictionary may itself use the English name as a fallback.
+- Card availability depends on verifiable source mappings and external image hosts. Printed card text can reflect a different rank or game version.
+- Categories and tags are derived from export fields and game paths, rather than a complete Wiki taxonomy.
 
-## Architecture and files
+## Updates and deployment
+
+The [GitHub Actions workflow](.github/workflows/pages.yml) imports and validates data, runs tests, builds the site and deploys it with the official GitHub Pages actions. It runs on pushes to `main`, daily at **04:23 UTC**, and manually through `workflow_dispatch`.
+
+To deploy your own copy:
+
+1. Enable GitHub Actions in your repository.
+2. Set **Settings → Pages → Build and deployment → Source** to **GitHub Actions**.
+3. Allow the workflow to commit generated data to `main`; repository rules or branch protection may require an adjusted persistence strategy.
+4. Run **Update mods and deploy Pages** from the Actions tab and check the deployment result.
+
+No additional secrets are required. Paths are relative, so the site supports GitHub Project Pages under a repository subpath. Forks should update the website and issue links in this README.
+
+Unchanged data does not create a new commit. Validation rejects empty or duplicate records and substantial losses of IDs, translations or images. New snapshots are staged before the active manifest is switched; failed imports, tests or builds stop deployment. The current and previous snapshots are retained.
+
+## Project layout
 
 ```text
-index.html                  English search interface
-src/app.js                  Result grid, copy buttons, image fallback and inline metadata
-src/search.js               Shared Unicode search/filter/sort functions
-src/style.css               Minimal responsive dark interface
-assets/                     Own SVG favicon and image placeholder
-scripts/import.mjs          Revision-pinned data and card mapping import
-scripts/lib.mjs             HTTP cache, joins, validation, atomic publication
-scripts/wiki-cards.mjs       Verified MediaWiki pageimages supplementation
-sources/wiki-cards.json      Retained exact-ID Wiki image mappings
-scripts/validate.mjs         Stored snapshot and index integrity checks
-scripts/build.mjs            Static artifact packaging
-scripts/serve.mjs            Loopback-only development server
-data/manifest.json          Active version, source revisions and coverage
-data/<version>/initial.json First 48 index records (24 displayed)
-data/<version>/index.json   All names and result metadata
-data/<version>/mods-*.json  Detail blocks of 128 records
-data/<version>/changes.json Added, changed and removed stable IDs
-tests/                     Small reproducible fixtures and snapshot integration
-.github/workflows/pages.yml Daily update, validation and Pages deployment
-.cache/http/               Ignored conditional-request cache
-dist/                      Ignored static build artifact
+index.html          Site entry point
+src/                Search, rendering and styles
+assets/             Local SVG assets
+scripts/            Import, normalization, validation, build and local server
+sources/            Verified supplementary Wiki image references
+data/               Generated snapshots and active manifest
+tests/              Unit tests, fixtures and snapshot checks
+.github/workflows/  Automated updates and Pages deployment
 ```
 
-Results include `id`, names, translations, categories, tags, rarity, `image`, `artwork`, `imageKind` and the detail shard. Details add metadata and source identifiers. `imageKind` distinguishes complete cards from illustrations. The manifest records data and card-source revisions and a SHA-256 content hash.
+`.cache/`, `node_modules/` and `dist/` are local generated directories and are excluded from Git.
 
-The first data slice is rendered before fetching the complete multilingual index. Only 24 result images and 360 translation cells are mounted per page. Listing metadata and Wiki links are included in the prebuilt index; visitors do not load detail shards. Source exports and dictionaries are never fetched by visitors. All asset/JSON URLs are relative, supporting GitHub Project Pages under a repository subpath. There are no detail routes or dialogs; no server rewrites are required.
+## Contributing
 
-## Automatic updates and GitHub Pages
+Report incorrect names, image mappings or categories through [Issues](https://github.com/Wuoc-k/warframe-mod-translations/issues). Include the English mod name, affected language and a reliable source when possible.
 
-The workflow runs daily at **04:23 UTC**, after pushes to `main`, and via **Actions → Update mods and deploy Pages → Run workflow**. It uses `ubuntu-latest`, Node 24 and the official configure/upload/deploy Pages actions.
+For changes, run `npm test`, `npm run validate` and `npm run build`. Prefer fixing the importer or source mapping over editing generated snapshot files directly. Do not add credentials or downloaded game images to the repository.
 
-One-time setup:
+## License and credits
 
-1. Push the implementation, generated `data/`, lockfile and workflow to `main`.
-2. Select **Settings → Pages → Build and deployment → Source: GitHub Actions**.
-3. Repository/organization policy and branch protection must allow the workflow bot to persist generated data commits to `main`. Otherwise persistence fails safely; adapt this step to an allowed data branch if required.
-4. Allow deployment from `main` in the `github-pages` environment; any environment approvals remain effective.
+The application code is available under the [MIT license](LICENSE). Third-party data and imagery retain their own terms; see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 
-No extra secrets are needed. Only the build/persistence job has `contents: write`; deployment has `pages: write` and `id-token: write`. Concurrency serializes runs. Unchanged data creates no new snapshot or commit. Bot commits contain only generated data and `.nojekyll`; `GITHUB_TOKEN` pushes plus `[skip ci]` avoid loops. Build artifacts contain `.nojekyll` and license notices.
+Warframe names and game imagery belong to Digital Extremes Ltd. This is an unofficial, non-commercial fan project, not affiliated with Digital Extremes. Use of game content is subject to the [Warframe Content Policy](https://www.warframe.com/en/contentpolicy).
 
-Expected URL after a successful deployment: `https://wuoc-k.github.io/warframe-mod-translations/`. A local build does not itself publish the website.
-
-## Reliability and tests
-
-HTTP uses four attempts for network/429/5xx failures, exponential backoff, bounded `Retry-After`, 45-second request timeouts and ETag/304 caching. Dictionaries load sequentially; a cached response is not silently substituted for a failed live import. Actions restores the HTTP cache across runs.
-
-Validation checks IDs, schemas, mandatory dictionaries, at least 1,000 mods, translation coverage, trusted image hosts and snapshot hashes. Loss of more than 10% of stable IDs, translations, image references or previously mapped complete cards stops publication. A legitimate large game cleanup may therefore need manual source review before adjusting thresholds.
-
-New versioned files are staged first; the active manifest is atomically replaced last. Tests simulate a disk write failure and verify that the old pointer stays intact. Current and previous snapshots are retained; older generated version folders are pruned with path-boundary checks. Failed imports/tests/builds prevent deployment, leaving the last published Pages version active. Git history retains prior data commits.
-
-`npm test` covers source joins, translations, variants, duplicates, Unicode search, missing data, full-card mapping/host/ambiguity checks, retry/backoff/304, change detection, loss guards, interrupted staging, safe cleanup and actual snapshot integrity. Unit tests are offline; the live importer is checked separately. Browser verification covers the full Vitality card, all 15 names without opening a dialog, copy actions, category/rarity filters and responsive layout.
-
-Use a modern browser supporting ES modules, Unicode property escapes and CSS Grid. Copy requires HTTPS or localhost and clipboard permission; failure leaves selectable text and a clear message. Small screens wrap languages into fewer columns without hiding them. There is no service worker.
-
-### Supplementary Wiki cards
-
-Missing community-export image fields do not mean that a full Wiki card does not exist. The importer queries MediaWiki pageimages in batches of at most 50 exact article titles and validates stable game ID, official name, article title, allowed host and portrait dimensions. Only missing cards are supplemented; existing mappings keep priority. The verified mapping file is retained across updates, so a 403 or temporary API outage does not discard known cards. No card filename is guessed. This repaired 38 mappings, including Capacitance, Calm & Frenzy and the Carnis set. The remaining entries are Oull, Quick Correct and Transmute Core; the checked Wiki responses did not supply a verified individual full card for them.
+Inspired by [WarframeTools](https://blackscorp.github.io/WarframeTools/).
