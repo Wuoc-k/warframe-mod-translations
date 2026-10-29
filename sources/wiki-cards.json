@@ -1,0 +1,385 @@
+{
+  "source": "https://wiki.warframe.com/api.php?action=query&prop=pageimages&piprop=original&formatversion=2&format=json",
+  "entries": [
+    {
+      "id": "/Lotus/Powersuits/YinYang/YinYangTargetAugmentCard",
+      "name": "Calm & Frenzy",
+      "title": "Calm & Frenzy",
+      "pageId": 923350,
+      "wikiUrl": "https://wiki.warframe.com/w/Calm_%26_Frenzy",
+      "image": "https://wiki.warframe.com/images/Calm%26FrenzyMod.png?ab2b9",
+      "width": 256,
+      "height": 375
+    },
+    {
+      "id": "/Lotus/Powersuits/Volt/OverloadAugmentCard",
+      "name": "Capacitance",
+      "title": "Capacitance",
+      "pageId": 696159,
+      "wikiUrl": "https://wiki.warframe.com/w/Capacitance",
+      "image": "https://wiki.warframe.com/images/CapacitanceMod.png?c84eb",
+      "width": 248,
+      "height": 364
+    },
+    {
+      "id": "/Lotus/Upgrades/Mods/Sets/Ashen/AshenCarapaceMod",
+      "name": "Carnis Carapace",
+      "title": "Carnis Carapace",
+      "pageId": 1523526,
+      "wikiUrl": "https://wiki.warframe.com/w/Carnis_Carapace",
+      "image": "https://wiki.warframe.com/images/CarnisCarapaceMod.png?83d35",
+      "width": 250,
+      "height": 375
+    },
+    {
+      "id": "/Lotus/Upgrades/Mods/Sets/Ashen/AshenMandibleMod",
+      "name": "Carnis Mandible",
+      "title": "Carnis Mandible",
+      "pageId": 1523214,
+      "wikiUrl": "https://wiki.warframe.com/w/Carnis_Mandible",
+      "image": "https://wiki.warframe.com/images/CarnisMandibleMod.png?00ad5",
+      "width": 250,
+      "height": 375
+    },
+    {
+      "id": "/Lotus/Upgrades/Mods/Sets/Ashen/AshenStingerMod",
+      "name": "Carnis Stinger",
+      "title": "Carnis Stinger",
+      "pageId": 1523530,
+      "wikiUrl": "https://wiki.warframe.com/w/Carnis_Stinger",
+      "image": "https://wiki.warframe.com/images/CarnisStingerMod.png?89f0d",
+      "width": 250,
+      "height": 375
+    },
+    {
+      "id": "/Lotus/Weapons/Tenno/Melee/MeleeTrees/DualSwordCmbThreeMeleeTree",
+      "name": "Carving Mantis",
+      "title": "Carving Mantis",
+      "pageId": 1218315,
+      "wikiUrl": "https://wiki.warframe.com/w/Carving_Mantis",
+      "image": "https://wiki.warframe.com/images/CarvingMantisMod.png?4bf31",
+      "width": 248,
+      "height": 364
+    },
+    {
+      "id": "/Lotus/Types/Friendly/Pets/CatbrowPetPrecepts/CatbrowCatsEyePrecept",
+      "name": "Cat's Eye",
+      "title": "Cat's Eye",
+      "pageId": 1016527,
+      "wikiUrl": "https://wiki.warframe.com/w/Cat's_Eye",
+      "image": "https://wiki.warframe.com/images/Cat%27sEyeMod.png?de302",
+      "width": 260,
+      "height": 379
+    },
+    {
+      "id": "/Lotus/Powersuits/Magician/TearInSpaceAugmentCard",
+      "name": "Cataclysmic Continuum",
+      "title": "Cataclysmic Continuum",
+      "pageId": 740059,
+      "wikiUrl": "https://wiki.warframe.com/w/Cataclysmic_Continuum",
+      "image": "https://wiki.warframe.com/images/CataclysmicContinuumMod.png?0ccd1",
+      "width": 256,
+      "height": 375
+    },
+    {
+      "id": "/Lotus/Powersuits/Wisp/WispSunAugmentCard",
+      "name": "Cataclysmic Gate",
+      "title": "Cataclysmic Gate",
+      "pageId": 1595876,
+      "wikiUrl": "https://wiki.warframe.com/w/Cataclysmic_Gate",
+      "image": "https://wiki.warframe.com/images/CataclysmicGateMod.png?81f61",
+      "width": 250,
+      "height": 364
+    },
+    {
+      "id": "/Lotus/Upgrades/Mods/Rifle/Event/StatusProcWhileAimingRifleMod",
+      "name": "Catalyzer Link",
+      "title": "Catalyzer Link",
+      "pageId": 907898,
+      "wikiUrl": "https://wiki.warframe.com/w/Catalyzer_Link",
+      "image": "https://wiki.warframe.com/images/CatalyzerLinkMod.png?e6e4b",
+      "width": 250,
+      "height": 364
+    },
+    {
+      "id": "/Lotus/Upgrades/Mods/Warframe/DualStat/FixedShieldAndShieldGatingDuration",
+      "name": "Catalyzing Shields",
+      "title": "Catalyzing Shields",
+      "pageId": 1580894,
+      "wikiUrl": "https://wiki.warframe.com/w/Catalyzing_Shields",
+      "image": "https://wiki.warframe.com/images/CatalyzingShieldsMod.png?6c874",
+      "width": 250,
+      "height": 364
+    },
+    {
+      "id": "/Lotus/Powersuits/Devourer/DevourerBowlAugmentCard",
+      "name": "Catapult",
+      "title": "Catapult",
+      "pageId": 1492301,
+      "wikiUrl": "https://wiki.warframe.com/w/Catapult",
+      "image": "https://wiki.warframe.com/images/CatapultMod.png?b62dd",
+      "width": 250,
+      "height": 364
+    },
+    {
+      "id": "/Lotus/Powersuits/Gyre/GyreEnergizedAugmentCard",
+      "name": "Cathode Current",
+      "title": "Cathode Current",
+      "pageId": 1574773,
+      "wikiUrl": "https://wiki.warframe.com/w/Cathode_Current",
+      "image": "https://wiki.warframe.com/images/CathodeCurrentMod.png?6c52e",
+      "width": 250,
+      "height": 364
+    },
+    {
+      "id": "/Lotus/Upgrades/Mods/Rifle/WeaponResistSelfDamageMod",
+      "name": "Cautious Shot",
+      "title": "Cautious Shot",
+      "pageId": 1355694,
+      "wikiUrl": "https://wiki.warframe.com/w/Cautious_Shot",
+      "image": "https://wiki.warframe.com/images/CautiousShotMod.png?3d040",
+      "width": 250,
+      "height": 364
+    },
+    {
+      "id": "/Lotus/Upgrades/Mods/PvPMods/Stances/PvPGlaiveStanceOne",
+      "name": "Celestial Nightfall",
+      "title": "Celestial Nightfall",
+      "pageId": 1015720,
+      "wikiUrl": "https://wiki.warframe.com/w/Celestial_Nightfall",
+      "image": "https://wiki.warframe.com/images/CelestialNightfallMod.png?c39bb",
+      "width": 248,
+      "height": 364
+    },
+    {
+      "id": "/Lotus/Powersuits/MonkeyKing/MonkeyPokeAugmentCard",
+      "name": "Celestial Stomp",
+      "title": "Celestial Stomp",
+      "pageId": 1429504,
+      "wikiUrl": "https://wiki.warframe.com/w/Celestial_Stomp",
+      "image": "https://wiki.warframe.com/images/CelestialStompMod.png?17036",
+      "width": 250,
+      "height": 364
+    },
+    {
+      "id": "/Lotus/Powersuits/Trinity/BlessingAugmentCard",
+      "name": "Champion's Blessing",
+      "title": "Champion's Blessing",
+      "pageId": 1554096,
+      "wikiUrl": "https://wiki.warframe.com/w/Champion's_Blessing",
+      "image": "https://wiki.warframe.com/images/Champion%27sBlessingMod.png?2126d",
+      "width": 250,
+      "height": 364
+    },
+    {
+      "id": "/Lotus/Powersuits/Jade/ChaosAugmentCard",
+      "name": "Chaos Sphere",
+      "title": "Chaos Sphere",
+      "pageId": 736174,
+      "wikiUrl": "https://wiki.warframe.com/w/Chaos_Sphere",
+      "image": "https://wiki.warframe.com/images/ChaosSphereMod.png?a944d",
+      "width": 248,
+      "height": 364
+    },
+    {
+      "id": "/Lotus/Upgrades/Mods/Archwing/Rifle/ArchwingEventElectricStatusRifleMod",
+      "name": "Charged Bullets",
+      "title": "Charged Bullets",
+      "pageId": 1366473,
+      "wikiUrl": "https://wiki.warframe.com/w/Charged_Bullets",
+      "image": "https://wiki.warframe.com/images/ChargedBulletsMod.png?ebe43",
+      "width": 310,
+      "height": 453
+    },
+    {
+      "id": "/Lotus/Upgrades/Mods/Rifle/SniperReloadDamageMod",
+      "name": "Charged Chamber",
+      "title": "Charged Chamber",
+      "pageId": 114297,
+      "wikiUrl": "https://wiki.warframe.com/w/Charged_Chamber",
+      "image": "https://wiki.warframe.com/images/ChargedChamberMod.png?bfc4c",
+      "width": 250,
+      "height": 364
+    },
+    {
+      "id": "/Lotus/Upgrades/Mods/Shotgun/WeaponElectricityDamageMod",
+      "name": "Charged Shell",
+      "title": "Charged Shell",
+      "pageId": 22904,
+      "wikiUrl": "https://wiki.warframe.com/w/Charged_Shell",
+      "image": "https://wiki.warframe.com/images/ChargedShellMod.png?dfd12",
+      "width": 250,
+      "height": 364
+    },
+    {
+      "id": "/Lotus/Types/Friendly/Pets/CatbrowPetPrecepts/CatbrowLuckPrecept",
+      "name": "Charm",
+      "title": "Charm",
+      "pageId": 1016293,
+      "wikiUrl": "https://wiki.warframe.com/w/Charm",
+      "image": "https://wiki.warframe.com/images/CharmMod.png?5d79a",
+      "width": 250,
+      "height": 364
+    },
+    {
+      "id": "/Lotus/Weapons/Tenno/Melee/MeleeTrees/StaffCmbOneMeleeTree",
+      "name": "Clashing Forest",
+      "title": "Clashing Forest",
+      "pageId": 430389,
+      "wikiUrl": "https://wiki.warframe.com/w/Clashing_Forest",
+      "image": "https://wiki.warframe.com/images/ClashingForestMod.png?11ec3",
+      "width": 248,
+      "height": 364
+    },
+    {
+      "id": "/Lotus/Upgrades/Mods/Warframe/AvatarSlideBoostMod",
+      "name": "Maglev",
+      "title": "Maglev",
+      "pageId": 197616,
+      "wikiUrl": "https://wiki.warframe.com/w/Maglev",
+      "image": "https://wiki.warframe.com/images/MaglevMod.png?9c65d",
+      "width": 250,
+      "height": 364
+    },
+    {
+      "id": "/Lotus/Powersuits/YinYang/YinYangSwitchPvPAugmentCard",
+      "name": "Push & Pull",
+      "title": "Push & Pull",
+      "pageId": 945948,
+      "wikiUrl": "https://wiki.warframe.com/w/Push_%26_Pull",
+      "image": "https://wiki.warframe.com/images/Push%26PullMod.png?7c87a",
+      "width": 250,
+      "height": 364
+    },
+    {
+      "id": "/Lotus/Powersuits/Nezha/NezhaTrailAugmentCard",
+      "name": "Pyroclastic Flow",
+      "title": "Pyroclastic Flow",
+      "pageId": 1146854,
+      "wikiUrl": "https://wiki.warframe.com/w/Pyroclastic_Flow",
+      "image": "https://wiki.warframe.com/images/PyroclasticFlowMod.png?0df5f",
+      "width": 250,
+      "height": 364
+    },
+    {
+      "id": "/Lotus/Upgrades/Mods/PvPMods/Stances/PvPFistStanceOne",
+      "name": "Quaking Hand",
+      "title": "Quaking Hand",
+      "pageId": 1015730,
+      "wikiUrl": "https://wiki.warframe.com/w/Quaking_Hand",
+      "image": "https://wiki.warframe.com/images/QuakingHandMod.png?3fdb3",
+      "width": 248,
+      "height": 364
+    },
+    {
+      "id": "/Lotus/Upgrades/Mods/Archwing/Rifle/ArchwingDualStatPunctureStatusMod",
+      "name": "Quasar Drill",
+      "title": "Quasar Drill",
+      "pageId": 1022346,
+      "wikiUrl": "https://wiki.warframe.com/w/Quasar_Drill",
+      "image": "https://wiki.warframe.com/images/QuasarDrillMod.png?61951",
+      "width": 250,
+      "height": 364
+    },
+    {
+      "id": "/Lotus/Upgrades/Mods/PvPMods/Warframe/ReduceShieldRechargeDelayWarframe",
+      "name": "Quick Charge",
+      "title": "Quick Charge",
+      "pageId": 723877,
+      "wikiUrl": "https://wiki.warframe.com/w/Quick_Charge",
+      "image": "https://wiki.warframe.com/images/QuickChargeMod.png?4be45",
+      "width": 250,
+      "height": 364
+    },
+    {
+      "id": "/Lotus/Upgrades/Mods/Hoverboard/HBEscapePlanMod",
+      "name": "Quick Escape",
+      "title": "Quick Escape",
+      "pageId": 1376319,
+      "wikiUrl": "https://wiki.warframe.com/w/Quick_Escape",
+      "image": "https://wiki.warframe.com/images/QuickEscapeMod.png?e124b",
+      "width": 310,
+      "height": 453
+    },
+    {
+      "id": "/Lotus/Upgrades/Mods/Archwing/Rifle/ArchwingRifleReloadSpeedMod",
+      "name": "Quick Reload",
+      "title": "Quick Reload",
+      "pageId": 1377197,
+      "wikiUrl": "https://wiki.warframe.com/w/Quick_Reload",
+      "image": "https://wiki.warframe.com/images/QuickReloadMod.png?a526d",
+      "width": 250,
+      "height": 364
+    },
+    {
+      "id": "/Lotus/Upgrades/Mods/Melee/WeaponGlaiveReflectionDecreaseMod",
+      "name": "Quick Return",
+      "title": "Quick Return",
+      "pageId": 195518,
+      "wikiUrl": "https://wiki.warframe.com/w/Quick_Return",
+      "image": "https://wiki.warframe.com/images/QuickReturnMod.png?1cfe7",
+      "width": 250,
+      "height": 364
+    },
+    {
+      "id": "/Lotus/Upgrades/Mods/Warframe/AvatarPowerToHealthOnDeathMod",
+      "name": "Quick Thinking",
+      "title": "Quick Thinking",
+      "pageId": 196118,
+      "wikiUrl": "https://wiki.warframe.com/w/Quick_Thinking",
+      "image": "https://wiki.warframe.com/images/QuickThinkingMod.png?60399",
+      "width": 310,
+      "height": 453
+    },
+    {
+      "id": "/Lotus/Upgrades/Mods/Pistol/WeaponReloadSpeedMod",
+      "name": "Quickdraw",
+      "title": "Quickdraw",
+      "pageId": 22775,
+      "wikiUrl": "https://wiki.warframe.com/w/Quickdraw",
+      "image": "https://wiki.warframe.com/images/QuickdrawMod.png?58e45",
+      "width": 248,
+      "height": 364
+    },
+    {
+      "id": "/Lotus/Upgrades/Mods/Melee/Channel/ChannelFireRateMod",
+      "name": "Quickening",
+      "title": "Quickening",
+      "pageId": 433578,
+      "wikiUrl": "https://wiki.warframe.com/w/Quickening",
+      "image": "https://wiki.warframe.com/images/QuickeningMod.png?2a8f6",
+      "width": 250,
+      "height": 364
+    },
+    {
+      "id": "/Lotus/Upgrades/Mods/Railjack/Gunnery/LavanFastOrdnanceLock",
+      "name": "Quicklock",
+      "title": "Quicklock",
+      "pageId": 1495636,
+      "wikiUrl": "https://wiki.warframe.com/w/Quicklock",
+      "image": "https://wiki.warframe.com/images/QuicklockMod.png?f26cc",
+      "width": 265,
+      "height": 380
+    },
+    {
+      "id": "/Lotus/Powersuits/Excalibur/RadialBlindAugmentCard",
+      "name": "Radiant Finish",
+      "title": "Radiant Finish",
+      "pageId": 707256,
+      "wikiUrl": "https://wiki.warframe.com/w/Radiant_Finish",
+      "image": "https://wiki.warframe.com/images/RadiantFinishMod.png?04017",
+      "width": 256,
+      "height": 376
+    },
+    {
+      "id": "/Lotus/Upgrades/Mods/Rifle/DualStat/RadiationReloadRifleMod",
+      "name": "Radiated Reload",
+      "title": "Radiated Reload",
+      "pageId": 1582115,
+      "wikiUrl": "https://wiki.warframe.com/w/Radiated_Reload",
+      "image": "https://wiki.warframe.com/images/RadiatedReloadMod.png?409ea",
+      "width": 250,
+      "height": 364
+    }
+  ]
+}

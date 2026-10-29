@@ -1,0 +1,12 @@
+import { cp, mkdir, writeFile } from 'node:fs/promises';
+import { root } from './lib.mjs';
+import { validateSnapshot } from './validate.mjs';
+const { manifest } = await validateSnapshot();
+const out = new URL('dist/', root);
+await mkdir(out, { recursive: true });
+for (const file of ['index.html', 'src', 'assets', '.nojekyll', 'THIRD_PARTY_NOTICES.md', 'LICENSE']) await cp(new URL(file, root), new URL(file, out), { recursive: true });
+await mkdir(new URL('data/', out), { recursive: true });
+await cp(new URL('data/' + manifest.version, root), new URL('data/' + manifest.version, out), { recursive: true });
+await cp(new URL('data/manifest.json', root), new URL('data/manifest.json', out));
+await writeFile(new URL('404.html', out), '<!doctype html><html lang="en"><meta charset="utf-8"><title>Not found</title><p>Page not found. <a href="./">Open Mod Translations</a></p></html>');
+console.log(`Built static site: ${manifest.count} mods → dist/`);

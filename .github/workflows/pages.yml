@@ -1,0 +1,63 @@
+name: Update mods and deploy Pages
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: '23 4 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: mod-database-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - uses: actions/cache@v4
+        with:
+          path: .cache/http
+          key: mod-import-${{ runner.os }}-${{ github.run_id }}
+          restore-keys: mod-import-${{ runner.os }}-
+      - name: Import official names and image references
+        run: npm run update:data
+      - run: npm test
+      - run: npm run validate
+      - run: npm run build
+      - name: Persist validated snapshot only when changed
+        run: |
+          git add data sources/wiki-cards.json .nojekyll
+          if ! git diff --cached --quiet; then
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git commit -m 'data: refresh Warframe mod snapshot [skip ci]'
+            git push origin HEAD:main
+          fi
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/configure-pages@v5
+      - name: Deploy static website
+        id: deployment
+        uses: actions/deploy-pages@v4

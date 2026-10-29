@@ -1,0 +1,14 @@
+{
+  "name": "warframe-mod-translations",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "update:data": "node scripts/import.mjs",
+    "validate": "node scripts/validate.mjs",
+    "build": "node scripts/build.mjs",
+    "test": "node --test"
+  }
+}

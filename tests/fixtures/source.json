@@ -1,0 +1,13 @@
+{
+  "upgrades": {
+    "/Lotus/Upgrades/Mods/Warframe/AvatarHealthMaxMod": { "name": "/Lotus/Language/Items/WarframeModHealthMax", "icon": "/Lotus/Interface/Cards/Images/AvatarMods/HealthMaxMod.png", "type": "WARFRAME", "rarity": "COMMON", "baseDrain": 2, "fusionLimit": 10 },
+    "/Lotus/Upgrades/Mods/Warframe/StarterHealth": { "name": "/Lotus/Language/Items/WarframeModHealthMax", "type": "WARFRAME", "isStarter": true },
+    "/Lotus/Upgrades/Mods/Warframe/Unused": { "name": "/Lotus/Language/Items/WarframeModHealthMax", "isFrivolous": true },
+    "/Lotus/Upgrades/Mods/Unknown": { "name": "/Lotus/Language/Missing" }
+  },
+  "dicts": {
+    "en": { "/Lotus/Language/Items/WarframeModHealthMax": "Vitality" },
+    "de": { "/Lotus/Language/Items/WarframeModHealthMax": "Vitalität" },
+    "fr": {}
+  }
+}
